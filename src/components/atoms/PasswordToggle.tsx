@@ -1,11 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-
-interface PasswordToggleProps {
-    show: boolean;
-    onClick: () => void;
-}
+import type { PasswordToggleProps } from "../../types/auth.type";
 
 const PasswordToggle: React.FC<PasswordToggleProps> = ({ show, onClick }) => {
     const label = show ? "Hide password" : "Show password";
@@ -14,7 +10,7 @@ const PasswordToggle: React.FC<PasswordToggleProps> = ({ show, onClick }) => {
         <Box
             as="button"
             position="absolute"
-            right="20px"
+            right="10%"
             top="50%"
             transform="translateY(-50%)"
             cursor="pointer"
