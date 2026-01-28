@@ -7,3 +7,4 @@ export { default as GhostButton } from "./GhostButton";
 export { default as PasswordToggle } from "./PasswordToggle";
 export { default as Input } from "./Input";
 export { default as ImageContainer } from "./ImageContainer";
+export { default as Card } from "./Card";
