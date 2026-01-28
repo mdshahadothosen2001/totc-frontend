@@ -31,6 +31,10 @@ const NavBar: React.FC = () => {
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+          <nav style={{ display: "flex", gap: 12, alignItems: "center" }}>
+            <a href="/login" style={{ color: "#5B5B5B", textDecoration: "none" }}>Login</a>
+            <a href="/register" style={{ background: "#49BBBD", color: "white", padding: "8px 12px", borderRadius: 6, textDecoration: "none" }}>Register</a>
+          </nav>
           <UserProfile />
         </div>
       </div>

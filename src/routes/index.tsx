@@ -3,22 +3,24 @@ import Home from "../components/pages/Home";
 import Login from "../components/pages/Login";
 import Register from "../components/pages/Register";
 
-type RouteKey = "/" | "/home" | "/login" | "/register";
-
-const routeMap: Record<RouteKey, React.ReactNode> = {
+const routeMap: Record<string, React.ReactNode> = {
   "/": <Home />,
   "/home": <Home />,
   "/login": <Login />,
   "/register": <Register />,
 };
 
+const normalize = (p: string) => {
+  if (!p) return "/";
+  const n = p.replace(/\/+$/g, "");
+  return n === "" ? "/" : n;
+};
+
 const Routes: React.FC = () => {
-  const [path, setPath] = useState<RouteKey>(
-    ((window.location.pathname as RouteKey) || "/") as RouteKey
-  );
+  const [path, setPath] = useState<string>(normalize(window.location.pathname));
 
   useEffect(() => {
-    const onPop = () => setPath(window.location.pathname as RouteKey);
+    const onPop = () => setPath(normalize(window.location.pathname));
     window.addEventListener("popstate", onPop);
     return () => window.removeEventListener("popstate", onPop);
   }, []);
