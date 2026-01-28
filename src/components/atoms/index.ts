@@ -8,3 +8,5 @@ export { default as PasswordToggle } from "./PasswordToggle";
 export { default as Input } from "./Input";
 export { default as ImageContainer } from "./ImageContainer";
 export { default as Card } from "./Card";
+export { default as Logo } from "./Logo";
+export { default as UserProfile } from "./UserProfile";
