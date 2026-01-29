@@ -17,3 +17,4 @@ export { default as SectionDescription } from "./sectionDescription/SectionDescr
 export { default as SectionTitle } from "./sectionTitle/SectionTitle";
 export { default as BlogSectionTitle } from "./sectionTitle/BlogSectionTitle";
 export { default as StartLabel } from "./startLabel/StartLabel";
+export { default as StarRating } from "./starRating/StarRating";
