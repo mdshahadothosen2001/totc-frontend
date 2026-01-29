@@ -9,3 +9,4 @@ export { CardTitle } from "./CardUI";
 export { CardDescription } from "./CardUI";
 export { CardContent } from "./CardUI";
 export { CardFooter } from "./CardUI";
+export { default as Input } from "./InputUI";
