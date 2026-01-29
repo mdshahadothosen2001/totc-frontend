@@ -10,3 +10,4 @@ export { CardDescription } from "./CardUI";
 export { CardContent } from "./CardUI";
 export { CardFooter } from "./CardUI";
 export { default as Input } from "./InputUI";
+export { default as Separator } from "./Separator";
