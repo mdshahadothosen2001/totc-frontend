@@ -1,3 +1,11 @@
 export { default as AuthCard } from "./AuthCard";
 export { default as LoginCard } from "./LoginCard";
 export { default as RegisterCard } from "./RegisterCard";
+export { default as BlogCard } from "./blogCard/BlogCard";
+export { default as BlogGrid } from "./blogGrid/BlogGrid";
+export { default as CategoryCard } from "./categoryCard/CategoryCard";
+export { default as BlogCourseCard } from "./courseCard/BlogCourseCard";
+export { default as FeaturesGrid } from "./featuresGrid/FeaturesGrid";
+export { default as Footer } from "./footer/Footer";
+export { default as BlogHeader } from "./header/BlogHeader";
+export { default as Header } from "./header/Header";

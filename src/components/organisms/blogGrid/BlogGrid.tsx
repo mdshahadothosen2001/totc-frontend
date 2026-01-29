@@ -1,0 +1,70 @@
+import type { JSX } from "react";
+import { BlogCard } from "../../molecules";
+
+const featuredArticle = {
+  image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-32.png",
+  badge: "NEWS",
+  title:
+    "Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution",
+  description:
+    "Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...",
+  link: "Read more",
+};
+
+const sideArticles = [
+  {
+    image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-33.png",
+    badge: "PRESS RELEASE",
+    title:
+      "Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand",
+    description: "Class Technologies Inc., the company that created Class,...",
+  },
+  {
+    image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-34.png",
+    badge: "NEWS",
+    title:
+      "Zoom's earliest investors are betting millions on a better Zoom for schools",
+    description:
+      "Zoom was never created to be a consumer product. Nonetheless, the...",
+  },
+  {
+    image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-37.png",
+    badge: "NEWS",
+    title:
+      "Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms",
+    description:
+      "This year, investors have reaped big financial returns from betting on Zoom...",
+  },
+];
+
+const BlogGrid = (): JSX.Element => {
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+      <BlogCard
+        image={featuredArticle.image}
+        badge={featuredArticle.badge}
+        title={featuredArticle.title}
+        description={featuredArticle.description}
+        link={featuredArticle.link}
+        delay={200}
+        variant="featured"
+      />
+
+      <div className="flex flex-col gap-8">
+        {sideArticles.map((article, index) => (
+          <BlogCard
+            key={index}
+            image={article.image}
+            badge={article.badge}
+            title={article.title}
+            description={article.description}
+            delay={400 + index * 200}
+            variant="side"
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default BlogGrid;

@@ -6,6 +6,7 @@ export { default as FeatureCard } from "./featureCard/FeatureCard";
 export { default as FooterLinks } from "./footerLinks/FooterLinks";
 export { default as MetaInfo } from "./metaInfo/MetaInfo";
 export { default as NavigationMenu } from "./navigationMenu/NavigationMenu";
+export { type NavigationItem } from "./navigationMenu/NavigationMenu";
 export { default as NewsletterForm } from "./newsLetterForm/NewsLetterForm";
 export { default as SectionHeader } from "./sectionHeader/SectionHeader";
 export { default as StatCard } from "./startCard/StartCard";
