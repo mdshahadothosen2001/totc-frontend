@@ -11,3 +11,6 @@ export { CardContent } from "./CardUI";
 export { CardFooter } from "./CardUI";
 export { default as Input } from "./InputUI";
 export { default as Separator } from "./Separator";
+export { Avatar } from "./UserAvatar";
+export { AvatarImage } from "./UserAvatar";
+export { AvatarFallback } from "./UserAvatar";
