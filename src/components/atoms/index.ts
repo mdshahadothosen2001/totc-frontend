@@ -12,3 +12,4 @@ export { default as Logo } from "./Logo";
 export { default as UserProfile } from "./UserProfile";
 export { default as Badge } from "./badge/Badge";
 export { default as DecorativeCircle } from "./decorativeCircle/DecorativeCircle";
+export { default as Price } from "./price/Price";
