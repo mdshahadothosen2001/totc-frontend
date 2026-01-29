@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Home from "../components/pages/Home";
-import Login from "../components/pages/Login";
-import Register from "../components/pages/Register";
+import { Home, Blog, Login, Register } from "../components/pages";
 
 const routeMap: Record<string, React.ReactNode> = {
   "/": <Home />,
   "/home": <Home />,
   "/login": <Login />,
   "/register": <Register />,
+  "/blog": <Blog />,
 };
 
 const normalize = (p: string) => {
@@ -28,7 +27,7 @@ const Routes: React.FC = () => {
   return (
     <div>
       <main style={{ minHeight: "calc(100vh - 83px)", background: "#F7FAFC" }}>
-        {routeMap[path] ?? <Home />}
+        {routeMap[path] ?? <Home/>}
       </main>
     </div>
   );

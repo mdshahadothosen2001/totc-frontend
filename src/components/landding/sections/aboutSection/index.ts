@@ -1,0 +1,1 @@
+export { AboutTotcSection } from "./AboutSection";

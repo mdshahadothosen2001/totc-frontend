@@ -6,3 +6,10 @@
     padding: 0;
     margin: 0;
 }
+
+/* Dev overrides: make elements visible even if utility classes hide them
+   These make it easier to develop without waiting for JS-driven animations. */
+.opacity-0 { opacity: 1 !important; }
+.animate-fade-in { animation: none !important; }
+/* Tailwind's bracketed class needs escaping in CSS selectors */
+.translate-y-\[\-1rem\] { transform: translateY(0) !important; }

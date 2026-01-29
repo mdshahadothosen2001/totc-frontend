@@ -9,3 +9,4 @@ export { default as FeaturesGrid } from "./featuresGrid/FeaturesGrid";
 export { default as Footer } from "./footer/Footer";
 export { default as BlogHeader } from "./header/BlogHeader";
 export { default as Header } from "./header/Header";
+export { default as StatsGrid } from "./startsGrid/StartsGrid";
