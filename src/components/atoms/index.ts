@@ -15,3 +15,4 @@ export { default as DecorativeCircle } from "./decorativeCircle/DecorativeCircle
 export { default as Price } from "./price/Price";
 export { default as SectionDescription } from "./sectionDescription/SectionDescription";
 export { default as SectionTitle } from "./sectionTitle/SectionTitle";
+export { default as BlogSectionTitle } from "./sectionTitle/BlogSectionTitle";
