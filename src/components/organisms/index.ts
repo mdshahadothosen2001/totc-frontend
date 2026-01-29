@@ -10,3 +10,7 @@ export { default as Footer } from "./footer/Footer";
 export { default as BlogHeader } from "./header/BlogHeader";
 export { default as Header } from "./header/Header";
 export { default as StatsGrid } from "./startsGrid/StartsGrid";
+export { default as CheckoutForm } from "./checkoutForm/CheckoutForm";
+export { default as OrderSummary } from "./orderSummary/OrderSummary";
+export { default as CheckoutHeader } from "./header/CheckoutHeader";
+export { type HeaderProps } from "./header/CheckoutHeader";

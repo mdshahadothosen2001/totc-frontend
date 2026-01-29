@@ -14,3 +14,5 @@ export { default as Separator } from "./Separator";
 export { Avatar } from "./UserAvatar";
 export { AvatarImage } from "./UserAvatar";
 export { AvatarFallback } from "./UserAvatar";
+export { default as Checkbox } from "./Checkbox";
+export { default as Label } from "./Label";

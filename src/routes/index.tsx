@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Home, Blog, Login, Register } from "../components/pages";
+import { Home, Blog, Login, Register, CheckoutPage } from "../components/pages";
 
 const routeMap: Record<string, React.ReactNode> = {
   "/": <Home />,
@@ -7,6 +7,7 @@ const routeMap: Record<string, React.ReactNode> = {
   "/login": <Login />,
   "/register": <Register />,
   "/blog": <Blog />,
+  "/checkout": <CheckoutPage />,
 };
 
 const normalize = (p: string) => {

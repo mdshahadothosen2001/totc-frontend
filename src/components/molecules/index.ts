@@ -11,3 +11,7 @@ export { default as NewsletterForm } from "./newsLetterForm/NewsLetterForm";
 export { default as SectionHeader } from "./sectionHeader/SectionHeader";
 export { default as StatCard } from "./startCard/StartCard";
 export { default as TestimonialCard } from "./testimonialCard/TestimonialCard";
+export { default as CartItem } from "./cartItem/CardItem";
+export { type CartItemProps } from "./cartItem/CardItem";
+export { default as PaymentMethodSelector } from "./paymentMethod/PaymentMethod";
+export { type PaymentMethod} from "./paymentMethod/PaymentMethod";
