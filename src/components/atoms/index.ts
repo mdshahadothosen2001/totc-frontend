@@ -16,3 +16,4 @@ export { default as Price } from "./price/Price";
 export { default as SectionDescription } from "./sectionDescription/SectionDescription";
 export { default as SectionTitle } from "./sectionTitle/SectionTitle";
 export { default as BlogSectionTitle } from "./sectionTitle/BlogSectionTitle";
+export { default as StartLabel } from "./startLabel/StartLabel";
