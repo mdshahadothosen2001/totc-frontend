@@ -20,3 +20,4 @@ export { default as StartLabel } from "./startLabel/StartLabel";
 export { default as StarRating } from "./starRating/StarRating";
 export { default as StatValue } from "./startValue/StartValue";
 export { default as Text } from "./text/Text";
+export { default as UserAvatar } from "./useravatar/userAvatar";
