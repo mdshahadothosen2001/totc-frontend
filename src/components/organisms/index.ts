@@ -1,8 +1,10 @@
 export { default as AuthCard } from "./AuthCard";
 export { default as LoginCard } from "./LoginCard";
 export { default as RegisterCard } from "./RegisterCard";
-export { default as BlogCard } from "./blogCard/BlogCard";
-export { default as BlogGrid } from "./blogGrid/BlogGrid";
+export { default as BlogCard } from "./blog/BlogCard";
+export { default as BlogGrid } from "./blog/BlogGrid";
+export { default as ReadingBlogList } from "./blog/ReadingBlogList";
+export { default as BlogContentCard } from "./blog/BlogContentCard";
 export { default as CategoryCard } from "./categoryCard/CategoryCard";
 export { default as BlogCourseCard } from "./courseCard/BlogCourseCard";
 export { default as FeaturesGrid } from "./featuresGrid/FeaturesGrid";
@@ -14,3 +16,5 @@ export { default as CheckoutForm } from "./checkoutForm/CheckoutForm";
 export { default as OrderSummary } from "./orderSummary/OrderSummary";
 export { default as CheckoutHeader } from "./header/CheckoutHeader";
 export { type HeaderProps } from "./header/CheckoutHeader";
+export { default as MarketingArticlesSection } from "./marketing/Marketing";
+export { default as RelatedBlogSection } from "./blog/RelatedBlogSection";

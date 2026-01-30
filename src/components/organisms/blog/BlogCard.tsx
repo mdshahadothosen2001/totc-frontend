@@ -27,6 +27,10 @@ const BlogCard = ({
   animationDelay = "0ms",
   className = "",
 }: BlogCardProps): JSX.Element => {
+  const handleReadMore = () => {
+    window.history.pushState({}, '', '/blog/detail');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
   return (
     <Card
       className={`bg-white rounded-[20px] shadow-[0px_18.83px_47.08px_#2f327d1a] border-0 overflow-hidden translate-y-[-1rem] animate-fade-in opacity-0 ${className}`}
@@ -61,6 +65,7 @@ const BlogCard = ({
           <ButtonUI
             variant="link"
             className="[font-family:'Poppins',Helvetica] font-normal text-[#696983] text-xl tracking-[0.40px] leading-9 underline p-0 h-auto"
+            onClick={handleReadMore}
           >
             Read more
           </ButtonUI>

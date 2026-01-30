@@ -1,7 +1,7 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import { ButtonUI } from "../../../../components/ui";
-import { BlogSectionTitle } from "../../../../components/atoms";
-import { BlogCard } from "../../../../components/organisms";
+import { ButtonUI } from "../../../components/ui";
+import { BlogSectionTitle } from "../../../components/atoms";
+import { BlogCard } from "../../../components/organisms";
 import type { JSX } from "react";
 
 const blogPosts = [

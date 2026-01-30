@@ -1,5 +1,5 @@
-import { BlogSectionTitle } from "../../../../components/atoms";
-import { CategoryCard } from "../../../../components/organisms";
+import { BlogSectionTitle } from "../../../components/atoms";
+import { CategoryCard } from "../../../components/organisms";
 import { type JSX } from "react";
 
 const blogCategories = [
@@ -21,7 +21,7 @@ const blogCategories = [
   },
 ];
 
-const HeroSection = (): JSX.Element => {
+const ReadingBlogList = (): JSX.Element => {
   return (
     <section className="w-full py-8 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto flex flex-col gap-6">
@@ -47,4 +47,4 @@ const HeroSection = (): JSX.Element => {
   );
 };
 
-export default HeroSection;
+export default ReadingBlogList;

@@ -4,9 +4,6 @@ export { default as CapabilitiesSection } from "./capabilitiesSection/Capabiliti
 export { default as CourseCatalogSection } from "./courseCatalogSection/CourseCatalogSection";
 export { default as FeaturesOverviewSection } from "./featuresOverviewSection/FeaturesOverviewSection";
 export { default as FooterSection } from "./footerSection/FooterSection";
-export { default as HeroSection } from "./heroSection/HeroSection";
 export { default as KeyMetricsSection } from "./KeyMetricsSection/KeyMetricsSection";
-export { default as MarketingArticlesSection } from "./marketing/BlogMarketing";
-export { default as RelatedBlogSection } from "./relatedBlogSection/RelatedBlogSection";
 export { default as SuccessHighlightsSection } from "./SuccessHighlightsSection/SuccessHighlightsSection";
 export { default as UserTestimonialsSection } from "./UserTestimonialsSection/UserTestimonialsSection";

@@ -1,5 +1,5 @@
 import React from "react";
-import userImg from "../../assets/userprofile.png";
+import userImg from "../../assets/lina-round.png";
 import type { UserProfileProps } from "../../types/user.type";
 
 const UserProfile: React.FC<UserProfileProps> = ({

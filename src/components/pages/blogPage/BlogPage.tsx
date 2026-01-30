@@ -1,34 +1,20 @@
 import { type JSX } from "react";
+import { NavBar } from "../../molecules";
 import { ButtonUI } from "../../../components/ui";
-import { BlogSectionTitle } from "../../../components/atoms";
-import { Text } from "../../../components/atoms";
-import { BlogHeader } from "../../../components/organisms";
-import { HeroSection } from "../home";
-import { MarketingArticlesSection } from "../home";
-import { RelatedBlogSection } from "../home";
-import { Footer } from "../../../components/organisms";
-
-const navigationItems = [
-  { label: "Home", href: "#" },
-  { label: "Courses", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "About Us", href: "#" },
-];
+import { BlogSectionTitle, Text } from "../../../components/atoms";
+import {
+  Footer,
+  ReadingBlogList,
+  RelatedBlogSection,
+  MarketingArticlesSection,
+} from "../../../components/organisms";
 
 const BlogPage = (): JSX.Element => {
   return (
     <div className="bg-white w-full min-h-screen" data-model-id="34:89">
-      <BlogHeader
-        navigationItems={navigationItems}
-        user={{
-          name: "Lina",
-          avatarSrc: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12.png",
-        }}
-        className="translate-y-[-1rem] animate-fade-in opacity-0"
-      />
+      <NavBar />
 
-      <section className="relative w-full bg-gradient-to-b from-[#f8f9fa] to-white px-[114px] py-[77px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+      <section className="relative w-full bg-white  px-[114px] py-[77px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
         <div className="flex items-center justify-between gap-12">
           <div className="flex-1 max-w-[688px]">
             <p className="[font-family:'Poppins',Helvetica] font-normal text-black text-2xl tracking-[0] mb-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
@@ -67,17 +53,9 @@ const BlogPage = (): JSX.Element => {
         </div>
       </section>
 
-      <HeroSection />
+      <ReadingBlogList />
 
       <RelatedBlogSection />
-
-      <section className="relative w-full px-[150px] py-12">
-        <img
-          className="w-[719px] h-[382px] rounded-[20px] object-cover"
-          alt="Article image"
-          src="https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-23.png"
-        />
-      </section>
 
       <MarketingArticlesSection />
 
