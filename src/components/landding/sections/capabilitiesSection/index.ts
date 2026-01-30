@@ -1,1 +1,0 @@
-export { CapabilitiesSection } from "./CapabilitiesSection";
