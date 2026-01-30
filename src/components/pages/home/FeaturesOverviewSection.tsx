@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { PhoneIcon } from "lucide-react";
-import { ButtonUI } from "../../../../components/ui";
-import { Card, CardContent } from "../../../../components/ui";
+import { ButtonUI } from "../../../components/ui";
+import { Card, CardContent } from "../../../components/ui";
 
 const videoParticipants = [
   {

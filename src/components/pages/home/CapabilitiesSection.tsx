@@ -1,7 +1,6 @@
 import type { JSX } from "react";
 import { PlayIcon } from "lucide-react";
-import { ButtonUI } from "../../../../components/ui/";
-import { Card, CardContent } from "../../../../components/ui";
+import { ButtonUI, Card, CardContent } from "../../../components/ui";
 
 const CapabilitiesSection = (): JSX.Element => {
   return (

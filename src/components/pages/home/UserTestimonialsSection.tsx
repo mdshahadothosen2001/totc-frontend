@@ -1,6 +1,6 @@
 import type { JSX } from "react";
-import { ButtonUI } from "../../../../components/ui";
-import { TestimonialCard } from "../../../molecules";
+import { ButtonUI } from "../../../components/ui";
+import { TestimonialCard } from "../../molecules";
 
 const UserTestimonialsSection = (): JSX.Element => {
   return (

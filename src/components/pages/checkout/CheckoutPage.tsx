@@ -1,26 +1,7 @@
 import type { JSX } from "react";
-import { CheckoutHeader } from "../../../components/organisms";
-import { Footer } from "../../../components/organisms";
-import { CheckoutForm } from "../../../components/organisms";
-import { OrderSummary } from "../../../components/organisms";
+import { CheckoutForm, OrderSummary, Footer } from "../../../components/organisms";
 import { EducationOffersSection } from "./EducationOffer"
-
-const FooterAny = Footer as unknown as (props: any) => JSX.Element;;
-
-// Data
-const navigationItems = [
-  { label: "Home", href: "#" },
-  { label: "Courses", href: "#" },
-  { label: "Careers", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "About Us", href: "#" },
-];
-
-const footerLinks = [
-  { label: "Careers", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-];
+import { NavBar } from "../../molecules";
 
 const paymentMethods = [
   {
@@ -73,11 +54,7 @@ export const CheckoutPage = (): JSX.Element => {
       className="bg-white w-full min-h-screen relative"
       data-model-id="54:821"
     >
-      <CheckoutHeader
-        navigationItems={navigationItems}
-        userName="Lina"
-        userAvatarUrl="https://c.animaapp.com/mkzqe3tg9lRjEM/img/image-12.png"
-      />
+      <NavBar/>
 
       <main className="px-[120px] py-12 flex gap-8">
         <CheckoutForm paymentMethods={paymentMethods} />
@@ -88,7 +65,7 @@ export const CheckoutPage = (): JSX.Element => {
         <EducationOffersSection />
       </div>
 
-      <FooterAny footerLinks={footerLinks} />
+      <Footer/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { BlogGrid } from "../../../organisms"
+import { BlogGrid } from "../../organisms"
 
 export const BlogAndNewsSection = (): JSX.Element => {
   return (

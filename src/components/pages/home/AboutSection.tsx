@@ -1,5 +1,5 @@
 import type { JSX } from "react";
-import { ButtonUI } from "../../../ui";
+import { ButtonUI } from "../../ui";
 
 const AboutTotcSection = (): JSX.Element => {
   return (

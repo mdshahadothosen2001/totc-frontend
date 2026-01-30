@@ -1,9 +1,6 @@
-export { default as AboutTotcSection } from "./aboutSection/AboutSection";
-export { default as BlogAndNewsSection } from "./blogAndNewsSection/BlogAndNewsSection";
-export { default as CapabilitiesSection } from "./capabilitiesSection/CapabilitiesSection";
-export { default as CourseCatalogSection } from "./courseCatalogSection/CourseCatalogSection";
-export { default as FeaturesOverviewSection } from "./featuresOverviewSection/FeaturesOverviewSection";
-export { default as FooterSection } from "./footerSection/FooterSection";
-export { default as KeyMetricsSection } from "./KeyMetricsSection/KeyMetricsSection";
-export { default as SuccessHighlightsSection } from "./SuccessHighlightsSection/SuccessHighlightsSection";
-export { default as UserTestimonialsSection } from "./UserTestimonialsSection/UserTestimonialsSection";
+export { default as AboutTotcSection } from "./AboutSection";
+export { default as CapabilitiesSection } from "./CapabilitiesSection";
+export { default as FeaturesOverviewSection } from "./FeaturesOverviewSection";
+export { default as CourseCatalogSection } from "./CourseCatalogSection";
+export { default as UserTestimonialsSection } from "./UserTestimonialsSection";
+export { default as BlogAndNewsSection } from "./BlogAndNewsSection";
