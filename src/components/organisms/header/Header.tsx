@@ -1,8 +1,13 @@
 import type { ReactElement } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Header = (): ReactElement => {
+  const navigate = useNavigate();
+
   return (
-    <header className="w-full relative bg-transparent translate-y-0 opacity-100">
+    <header
+    onClick={() => navigate('/course')}
+     className="w-full relative bg-transparent translate-y-0 opacity-100">
       <img
         className="w-full h-auto"
         alt="Header bg"
