@@ -15,3 +15,7 @@ export { default as CartItem } from "./cartItem/CardItem";
 export { type CartItemProps } from "./cartItem/CardItem";
 export { default as PaymentMethodSelector } from "./paymentMethod/PaymentMethod";
 export { type PaymentMethod} from "./paymentMethod/PaymentMethod";
+export { default as CategoryBadge } from "./course/CategoryBadge";
+export { default as DurationBadge } from "./course/DurationBadge";
+export { default as CourseProgress } from "./course/CourseProgress";
+export { default as InstructorInfo } from "./authInfo/InstructorInfo";
