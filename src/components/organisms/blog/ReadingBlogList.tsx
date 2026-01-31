@@ -17,7 +17,7 @@ const blogCategories = [
   },
   {
     title: "JavaScript",
-    image: "/src/assets/blog-reading-list-4.png",
+    image: "/src/assets/laptop-coding-cup.png",
   },
 ];
 
