@@ -21,3 +21,10 @@ export { default as CourseCard, type CourseCardProps } from "./course/CourseCard
 export { default as FeaturedCoursesSection } from "./course/FeaturedCourseSection";
 export { default as CourseCategorySection } from "./course/CourseCategorySection";
 export { default as CourseSection } from "./course/CourseSection";
+export { default as HeroSection } from "./courseDetails/HeroSection";
+export { default as PricingCard } from "./courseDetails/PricingCard";
+export { default as CDCourseCard } from "./courseDetails/CourseCard";
+export { default as RatingSection } from "./courseDetails/RatingSection";
+export { default as OfferCard } from "./courseDetails/OfferCard";
+export { default as ArticlePreview } from "./courseDetails/ArticlePreview";
+export { default as CDSectionTitle } from "./courseDetails/SectionTittle";

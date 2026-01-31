@@ -6,14 +6,14 @@ import type { JSX } from "react";
 const articles = [
     {
         id: 1,
-        image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-33.png",
-        overlayImage: "https://c.animaapp.com/mkz9q4w59BG82d/img/group-249.png",
+        image: "/src/assets/laptop-cat.png",
+        overlayImage: "/src/assets/four-block.png",
         title: "AWS Certified solutions Architect",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
         author: {
             name: "Lina",
-            avatar: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12-3.png",
+            avatar: "/src/assets/lina-square.png",
         },
         category: "Design",
         duration: "3 Month",
@@ -22,13 +22,13 @@ const articles = [
     },
     {
         id: 2,
-        image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-32-4.png",
+        image: "/src/assets/laptop-cat.png",
         title: "AWS Certified solutions Architect",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
         author: {
             name: "Lina",
-            avatar: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12-4.png",
+            avatar: "/src/assets/lina-square.png",
         },
         category: "Design",
         duration: "3 Month",
@@ -37,13 +37,13 @@ const articles = [
     },
     {
         id: 3,
-        image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-32-4.png",
+        image: "/src/assets/laptop-cat.png",
         title: "AWS Certified solutions Architect",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
         author: {
             name: "Lina",
-            avatar: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12-5.png",
+            avatar: "/src/assets/lina-square.png",
         },
         category: "Design",
         duration: "3 Month",
@@ -52,13 +52,13 @@ const articles = [
     },
     {
         id: 4,
-        image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-42.png",
+        image: "/src/assets/laptop-cat.png",
         title: "AWS Certified solutions Architect",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
         author: {
             name: "Lina",
-            avatar: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12-6.png",
+            avatar: "/src/assets/lina-square.png",
         },
         category: "Design",
         duration: "3 Month",

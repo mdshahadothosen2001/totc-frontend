@@ -10,14 +10,13 @@ export interface AuthorInfoProps {
 
 const AuthorInfo = ({
     name,
-    avatarSrc,
     size = "sm",
     className = "",
 }: AuthorInfoProps): JSX.Element => {
     return (
-        <div className={`flex items-center gap-[18px] ${className}`}>
+        <div className={`flex items-start gap-[18px] ${className}`}>
             <UserAvatar
-                src={avatarSrc}
+                src="/src/assets/lina-square.png"
                 alt={name}
                 fallback={name.charAt(0)}
                 size={size}

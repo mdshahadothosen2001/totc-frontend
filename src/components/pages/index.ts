@@ -6,3 +6,4 @@ export { default as CheckoutPage } from "./checkout/CheckoutPage";
 export { default as BlogDetailsPage } from "./blogPage/BlogDetailsPage";
 export { Search } from "./search/SearchPage";
 export { Course } from "./course/CoursePage";
+export { default as CourseDetails } from "./course/CourseDetailsPage";

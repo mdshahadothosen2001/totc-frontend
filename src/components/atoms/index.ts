@@ -23,3 +23,4 @@ export { default as Text } from "./text/Text";
 export { default as UserAvatar } from "./useravatar/userAvatar";
 export { default as PriceTag } from "./price/PriceTag";
 export { default as SeeAllLink } from "./SeeAllLink";
+export { default as PriceDisplay } from "./courseDetails/PricingDisplay";

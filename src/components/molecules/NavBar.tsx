@@ -13,7 +13,7 @@ import {
 
 const NavBar: React.FC = () => {
   return (
-    <header className="w-full h-[83px] relative bg-white shadow-md z-50">
+    <header className="w-full h-[83px] relative bg-white z-50">
       <div className="max-w-[1680px] h-full mx-auto flex items-center justify-between relative px-6">
 
         <Logo />
