@@ -23,10 +23,12 @@ const ArticlePreview: React.FC<ArticlePreviewProps> = ({
       {/* Left-aligned header */}
       <div className="flex items-start justify-start gap-4">
         <AuthorInfo
-          name={author.name}
-          avatarUrl={author.avatarUrl}
-          avatarSize="large"
-          showName={true}
+          {...({
+            name: author.name,
+            avatarUrl: author.avatarUrl,
+            avatarSize: "large",
+            showName: true,
+          } as any)}
         />
         <DurationBadge duration={duration} />
       </div>
