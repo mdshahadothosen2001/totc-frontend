@@ -6,19 +6,19 @@ import { NavBar } from "../../molecules";
 const paymentMethods = [
   {
     id: "paypal",
-    image: "https://c.animaapp.com/mkzqe3tg9lRjEM/img/paypal.png",
+    image: "/src/assets/paypal-logo.png",
     alt: "Paypal",
     selected: true,
   },
   {
     id: "amex",
-    image: "https://c.animaapp.com/mkzqe3tg9lRjEM/img/am-amex-06-1.png",
+    image: "/src/assets/americanexpress-logo.png",
     alt: "American Express",
     selected: false,
   },
   {
     id: "visa",
-    image: "https://c.animaapp.com/mkzqe3tg9lRjEM/img/download-1.png",
+    image: "/src/assets/visa-logo.png",
     alt: "Visa",
     selected: false,
   },
@@ -27,14 +27,14 @@ const paymentMethods = [
 const cartItems = [
   {
     image:
-      "https://c.animaapp.com/mkzqe3tg9lRjEM/img/confident-teacher-explaining-lesson-pupils-2.png",
+      "/src/assets/classroom-videobtn.png",
     title: "Lorem ipsum dollar...",
     description: "adipising elit, sed do eiusmod tempor",
     price: "$24.69",
   },
   {
     image:
-      "https://c.animaapp.com/mkzqe3tg9lRjEM/img/confident-teacher-explaining-lesson-pupils-2.png",
+      "/src/assets/classroom-videobtn.png",
     title: "Lorem ipsum dollar...",
     description: "sed do eiusmod tempor adipising elit",
     price: "$24.69",

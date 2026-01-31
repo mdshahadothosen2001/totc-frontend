@@ -7,21 +7,21 @@ const educationOffers = [
         title: "Lorem ipsum dolor",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor\nLorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-        image: "https://c.animaapp.com/mkzqe3tg9lRjEM/img/rectangle-187.svg",
+        image: "/src/assets/laptop-meeting.png",
     },
     {
         discount: "10%",
         title: "Lorem ipsum dolor",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor\nLorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-        image: "https://c.animaapp.com/mkzqe3tg9lRjEM/img/rectangle-188.svg",
+        image: "/src/assets/tablet-learning.png",
     },
     {
         discount: "50%",
         title: "Lorem ipsum dolor",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor\nLorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
-        image: "https://c.animaapp.com/mkzqe3tg9lRjEM/img/rectangle-189.svg",
+        image: "/src/assets/laptop-cat.png",
     },
 ];
 
