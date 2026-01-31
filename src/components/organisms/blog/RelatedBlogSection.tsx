@@ -7,27 +7,27 @@ import type { JSX } from "react";
 const blogPosts = [
   {
     id: 1,
-    image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-32-4.png",
+    image: "/src/assets/related-blog-1.png",
     title:
       "Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution",
     excerpt:
       "Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...",
     author: {
       name: "Lina",
-      avatar: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12-1.png",
+      avatar: "/src/assets/lina-square.png",
     },
     views: "251,232",
   },
   {
     id: 2,
-    image: "https://c.animaapp.com/mkz9q4w59BG82d/img/group-40-1.png",
+    image: "/src/assets/related-blog-2.png",
     title:
       "Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution",
     excerpt:
       "Class, launched less than a year ago by Blackboard co-founder Michael Chasen, integrates exclusively...",
     author: {
       name: "Lina",
-      avatar: "https://c.animaapp.com/mkz9q4w59BG82d/img/image-12-2.png",
+      avatar: "/src/assets/lina-square.png",
     },
     views: "251,232",
   },

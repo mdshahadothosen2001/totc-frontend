@@ -5,19 +5,19 @@ import { type JSX } from "react";
 const blogCategories = [
   {
     title: "UX/UI",
-    image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-34-6.png",
+    image: "/src/assets/blog-reading-list-1.png",
   },
   {
     title: "React",
-    image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-34-7.png",
+    image: "/src/assets/blog-reading-list-2.png",
   },
   {
     title: "PHP",
-    image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-34-5.png",
+    image: "/src/assets/blog-reading-list-3.png",
   },
   {
     title: "JavaScript",
-    image: "https://c.animaapp.com/mkz9q4w59BG82d/img/rectangle-34-3.png",
+    image: "/src/assets/blog-reading-list-4.png",
   },
 ];
 

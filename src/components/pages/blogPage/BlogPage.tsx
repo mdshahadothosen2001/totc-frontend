@@ -47,7 +47,7 @@ const BlogPage = (): JSX.Element => {
             <img
               className="w-[779px] h-[527px] object-cover"
               alt="Blog featured image"
-              src="https://c.animaapp.com/mkz9q4w59BG82d/img/group-40.png"
+              src="/src/assets/group-40.png"
             />
           </div>
         </div>
