@@ -10,6 +10,7 @@ import {
   DrawerBody,
   DrawerCloseTrigger,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const NavBar: React.FC = () => {
   return (
@@ -22,12 +23,12 @@ const NavBar: React.FC = () => {
           <ul className="flex gap-9 items-center list-none">
             {navItems.map((item) => (
               <li key={item.label}>
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="font-poppins text-[22px] text-[#5B5B5B] font-normal cursor-pointer hover:text-[#49BBBD] transition-colors"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -51,18 +52,18 @@ const NavBar: React.FC = () => {
               </DrawerHeader>
               <DrawerBody>
                 <div className="flex flex-col gap-4 mt-6">
-                  <a
-                    href="/login"
+                  <Link
+                    to="/login"
                     className="w-full text-center py-3 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
                   >
                     Login
-                  </a>
-                  <a
-                    href="/register"
+                  </Link>
+                  <Link
+                    to="/register"
                     className="w-full text-center py-3 rounded-md bg-[#49BBBD] text-white hover:opacity-90 transition"
                   >
                     Register
-                  </a>
+                  </Link>
                 </div>
               </DrawerBody>
             </DrawerContent>
