@@ -1,2 +1,9 @@
 export { default as TabToggle } from "./TabToggle";
 export { default as NavBar } from "./NavBar";
+export { default as AuthInfo } from "./authInfo/AuthInfo";
+export { default as InstructorInfo } from "./authInfo/InstructorInfo";
+export { default as CourseCategoryBadge } from "./course/CategoryBadge";
+export { default as CourseProgress } from "./course/CourseProgress";
+export { default as CourseDurationBadge } from "./course/DurationBadge";
+export { default as FooterLinks } from "./footer/FooterLinks";
+export { default as NewsLetterForm } from "./footer/NewsLetterForm";
