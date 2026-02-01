@@ -7,3 +7,4 @@ export { default as Blog } from "./blogPage/BlogPage";
 export { default as BlogDetail } from "./blogPage/BlogDetailsPage";
 export { default as Checkout } from "./checkout/CheckoutPage";
 export { default as Search } from "./search/SearchPage";
+export { default as LiteratureCourse } from "./course/LiteraturePage";

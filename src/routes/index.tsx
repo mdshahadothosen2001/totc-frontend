@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail, Checkout, Search } from "../components/pages";
+import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail, Checkout, Search, LiteratureCourse } from "../components/pages";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -16,6 +16,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/search" element={<Search />} />
         <Route path="/course" element={<Course />} />
         <Route path="/course/details" element={<CourseDetail />} />
+        <Route path="/course/literature" element={<LiteratureCourse />} />
       </Routes>
     </main>
   );

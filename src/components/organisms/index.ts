@@ -31,3 +31,7 @@ export { default as BlogCourseCard } from "./courseCard/CourseCard";
 // Checkout exports
 export { default as CheckoutForm } from "./checkout/CheckoutForm";
 export { default as OrderSummary } from "./checkout/OrderSummary";
+
+// Course Details - Literature exports
+export { default as LiteratureBanner } from "./courseDetails/LiteratureBanner";
+export { default as TabNavigation } from "./courseDetails/LiteratureTab";

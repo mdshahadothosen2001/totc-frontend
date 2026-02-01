@@ -17,3 +17,7 @@ export { AvatarFallback } from "./UserAvatar";
 export { default as Checkbox } from "./Checkbox";
 export { default as Label } from "./Label";
 export { default as Progress } from "./Progress";
+export { Tabs } from "./Tab";
+export { TabsList } from "./Tab";
+export { TabsTrigger } from "./Tab";
+export { TabsContent } from "./Tab";
