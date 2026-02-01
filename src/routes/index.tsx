@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail, Checkout } from "../components/pages";
+import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail, Checkout, Search } from "../components/pages";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/details" element={<BlogDetail />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/search" element={<Home />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/course" element={<Course />} />
         <Route path="/course/details" element={<CourseDetail />} />
       </Routes>
