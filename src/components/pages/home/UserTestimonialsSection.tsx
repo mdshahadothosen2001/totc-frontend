@@ -13,7 +13,7 @@ const UserTestimonialsSection = (): JSX.Element => {
                 <img
                   className="h-px w-20 object-cover"
                   alt="Line"
-                  src="https://c.animaapp.com/mkz223c55tsHtR/img/line-4.svg"
+                  src="/src/assets/line-4.svg"
                 />
                 <p className="[font-family:'Nunito_Sans',Helvetica] font-normal text-[#525596] text-xl tracking-[4.00px] leading-normal">
                   TESTIMONIAL
@@ -52,7 +52,7 @@ const UserTestimonialsSection = (): JSX.Element => {
                 <img
                   className="ml-4 w-12 h-12"
                   alt="Arrow icon"
-                  src="https://c.animaapp.com/mkz223c55tsHtR/img/group-32.png"
+                  src="/src/assets/right-arrow-line.png"
                 />
               </ButtonUI>
             </div>
@@ -63,13 +63,13 @@ const UserTestimonialsSection = (): JSX.Element => {
               <img
                 className="w-full max-w-[560px] h-auto mx-auto lg:mx-0"
                 alt="Testimonial person"
-                src="https://c.animaapp.com/mkz223c55tsHtR/img/mask-group.png"
+                src="/src/assets/mask.png"
               />
 
               <img
                 className="absolute top-8 right-0 w-[150px] h-[150px] md:w-[200px] md:h-[200px]"
                 alt="Decorative element"
-                src="https://c.animaapp.com/mkz223c55tsHtR/img/group-51.png"
+                src="/src/assets/right-arrow.png"
               />
             </div>
 

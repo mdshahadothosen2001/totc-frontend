@@ -9,7 +9,7 @@ export { default as CategoryCard } from "./categoryCard/CategoryCard";
 export { default as BlogCourseCard } from "./courseCard/BlogCourseCard";
 export { default as FeaturesGrid } from "./featuresGrid/FeaturesGrid";
 export { default as Footer } from "./footer/Footer";
-export { default as Header } from "./header/Header";
+export { default as HomeBanner } from "./home/HomeBanner";
 export { default as StatsGrid } from "./startsGrid/StartsGrid";
 export { default as CheckoutForm } from "./checkoutForm/CheckoutForm";
 export { default as OrderSummary } from "./orderSummary/OrderSummary";

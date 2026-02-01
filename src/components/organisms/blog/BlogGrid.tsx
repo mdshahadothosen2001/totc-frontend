@@ -2,7 +2,7 @@ import type { JSX } from "react";
 import { BlogCard } from "../../molecules";
 
 const featuredArticle = {
-  image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-32.png",
+  image: "/src/assets/laptop-meeting.png",
   badge: "NEWS",
   title:
     "Class adds $30 million to its balance sheet for a Zoom-friendly edtech solution",
@@ -13,14 +13,14 @@ const featuredArticle = {
 
 const sideArticles = [
   {
-    image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-33.png",
+    image: "/src/assets/tablet-learning.png",
     badge: "PRESS RELEASE",
     title:
       "Class Technologies Inc. Closes $30 Million Series A Financing to Meet High Demand",
     description: "Class Technologies Inc., the company that created Class,...",
   },
   {
-    image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-34.png",
+    image: "/src/assets/laptop-meeting-by-one.png",
     badge: "NEWS",
     title:
       "Zoom's earliest investors are betting millions on a better Zoom for schools",
@@ -28,7 +28,7 @@ const sideArticles = [
       "Zoom was never created to be a consumer product. Nonetheless, the...",
   },
   {
-    image: "https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-37.png",
+    image: "/src/assets/laptop-cat.png",
     badge: "NEWS",
     title:
       "Former Blackboard CEO Raises $16M to Bring LMS Features to Zoom Classrooms",

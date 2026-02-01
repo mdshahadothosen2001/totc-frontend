@@ -40,7 +40,7 @@ const CapabilitiesSection = (): JSX.Element => {
           <img
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[30px] h-[30px] z-10"
             alt="Ellipse"
-            src="https://c.animaapp.com/mkz223c55tsHtR/img/ellipse-13.svg"
+            src="/src/assets/ellipse-overlay.png"
           />
 
           <Card className="relative overflow-hidden rounded-[20px] border-0 shadow-none">
@@ -48,7 +48,7 @@ const CapabilitiesSection = (): JSX.Element => {
               <img
                 className="w-full h-auto rounded-[20px] object-cover"
                 alt="Confident teacher"
-                src="https://c.animaapp.com/mkz223c55tsHtR/img/confident-teacher-explaining-lesson-pupils-1.png"
+                src="/src/assets/classroom-videobtn.png"
               />
 
               <ButtonUI

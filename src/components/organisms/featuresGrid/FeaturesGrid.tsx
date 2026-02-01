@@ -3,19 +3,19 @@ import { FeatureCard } from "../../molecules";
 
 const metricsData = [
   {
-    icon: "https://c.animaapp.com/mkz223c55tsHtR/img/group-79.png",
+    icon: "/src/assets/icons/file-icon-round.png",
     title: "Online Billing, Invoicing, & Contracts",
     description:
       "Simple and secure control of your organization's financial and legal transactions. Send customized invoices and contracts",
   },
   {
-    icon: "https://c.animaapp.com/mkz223c55tsHtR/img/group-80.png",
+    icon: "/src/assets/icons/calendar-icon.png",
     title: "Easy Scheduling & Attendance Tracking",
     description:
       "Schedule and reserve classrooms at one campus or multiple campuses. Keep detailed records of student attendance",
   },
   {
-    icon: "https://c.animaapp.com/mkz223c55tsHtR/img/group-81.png",
+    icon: "/src/assets/icons/users-icon.png",
     title: "Customer Tracking",
     description:
       "Automate and track emails to individuals or groups. Skilline's built-in system helps organize your organization",

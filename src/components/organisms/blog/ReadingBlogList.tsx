@@ -5,7 +5,7 @@ import { type JSX } from "react";
 const blogCategories = [
   {
     title: "UX/UI",
-    image: "/src/assets/blog-reading-list-1.png",
+    image: "/src/assets/laptop-meeting-by-one.png",
   },
   {
     title: "React",

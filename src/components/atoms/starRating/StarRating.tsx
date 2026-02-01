@@ -20,7 +20,7 @@ export const StarRating = ({
                         key={`star-${index}`}
                         className="w-[22.8px] h-[21.69px]"
                         alt="Star rating"
-                        src="https://c.animaapp.com/mkz223c55tsHtR/img/star-5.svg"
+                        src="/src/assets/star.png"
                     />
                 ))}
         </div>

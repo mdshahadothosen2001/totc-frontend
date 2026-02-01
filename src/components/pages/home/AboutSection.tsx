@@ -18,45 +18,48 @@ const AboutTotcSection = (): JSX.Element => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[100px] w-full mt-8">
-          <div className="flex flex-col items-center gap-6 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-            <img
-              className="w-full max-w-[600px] h-auto"
-              alt="For Instructors"
-              src="https://c.animaapp.com/mkz223c55tsHtR/img/group-22.png"
-            />
-            <div className="flex flex-col items-center gap-4">
-              <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-[#2f327d] text-[32px] text-center tracking-[0] leading-[normal]">
-                FOR INSTRUCTORS
-              </h3>
-              <ButtonUI
-                variant="outline"
-                className="h-20 px-10 rounded-[80px] border-2 border-[#2f327d] bg-transparent hover:bg-[#2f327d] hover:text-white transition-colors"
-              >
-                <span className="[font-family:'Poppins',Helvetica] font-medium text-[22px]">
-                  Start a class today
-                </span>
-              </ButtonUI>
+            <div className="flex flex-col items-center gap-6 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+              <div className="relative w-full max-w-[600px] h-[400px] rounded-[20px] overflow-hidden">
+                <img
+                  className="absolute inset-0 w-full h-full object-cover"
+                  alt="For Instructors"
+                  src="/src/assets/hashi.png"
+                />
+                <div className="absolute inset-0 bg-[#171b4073] opacity-60" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                  <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-[32px] text-center tracking-[0] leading-[normal]">
+                    FOR INSTRUCTORS
+                  </h3>
+                  <ButtonUI
+                    variant="outline"
+                    className="h-20 px-10 rounded-[80px] border-2 border-white bg-transparent text-white hover:bg-[#2f327d] hover:text-white transition-colors"
+                  >
+                    <span className="[font-family:'Poppins',Helvetica] font-medium text-[22px]">
+                      Start a class today
+                    </span>
+                  </ButtonUI>
+                </div>
+              </div>
             </div>
-          </div>
 
           <div className="flex flex-col items-center gap-6 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
             <div className="relative w-full max-w-[600px] h-[400px] rounded-[20px] overflow-hidden">
               <img
                 className="absolute inset-0 w-full h-full object-cover"
                 alt="For Students"
-                src="https://c.animaapp.com/mkz223c55tsHtR/img/rectangle-21.png"
+                src="/src/assets/meeting-3-people.png"
               />
               <div className="absolute inset-0 bg-[#171b4073] opacity-60" />
-            </div>
-            <div className="flex flex-col items-center gap-4">
-              <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-[32px] text-center tracking-[0] leading-[normal]">
-                FOR STUDENTS
-              </h3>
-              <ButtonUI className="h-20 px-10 rounded-[80px] bg-[#23bdeee6] hover:bg-[#23bdee] transition-colors">
-                <span className="[font-family:'Poppins',Helvetica] font-medium text-white text-[22px]">
-                  Enter access code
-                </span>
-              </ButtonUI>
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                <h3 className="[font-family:'Poppins',Helvetica] font-semibold text-white text-[32px] text-center tracking-[0] leading-[normal]">
+                  FOR STUDENTS
+                </h3>
+                <ButtonUI className="h-20 px-10 rounded-[80px] bg-[#23bdeee6] hover:bg-[#23bdee] transition-colors">
+                  <span className="[font-family:'Poppins',Helvetica] font-medium text-white text-[22px]">
+                    Enter access code
+                  </span>
+                </ButtonUI>
+              </div>
             </div>
           </div>
         </div>

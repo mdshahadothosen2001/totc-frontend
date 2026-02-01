@@ -1,10 +1,10 @@
 import type { JSX } from "react";
-import { Header, Footer, StatsGrid, FeaturesGrid } from "../../organisms";
+import { HomeBanner, Footer, StatsGrid, FeaturesGrid } from "../../organisms";
 import {
   AboutTotcSection,  
   CapabilitiesSection, 
-  FeaturesOverviewSection, 
-  CourseCatalogSection, 
+  // FeaturesOverviewSection, 
+  // CourseCatalogSection, 
   UserTestimonialsSection, 
   BlogAndNewsSection 
 } from "../home";
@@ -13,8 +13,7 @@ import { SectionHeader } from "../../molecules";
 const HomePage = (): JSX.Element => {
   return (
     <div className="bg-white overflow-hidden w-full flex flex-col">
-      <Header />
-
+      <HomeBanner />
       {/* Success Highlights Section */}
       <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
         <section className="w-full py-16 px-4">
@@ -56,13 +55,13 @@ const HomePage = (): JSX.Element => {
         <CapabilitiesSection />
       </div>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">
+      {/* <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">
         <FeaturesOverviewSection />
-      </div>
+      </div> */}
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms]">
+      {/* <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1200ms]">
         <CourseCatalogSection />
-      </div>
+      </div> */}
 
       <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1400ms]">
         <UserTestimonialsSection />

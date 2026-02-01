@@ -31,7 +31,7 @@ export const TestimonialCard = ({
           <img
             className="w-px h-[139px] object-cover flex-shrink-0"
             alt="Decorative line"
-            src="https://c.animaapp.com/mkz223c55tsHtR/img/line-3.svg"
+            src="/src/assets/line-3.png"
           />
 
           <div className="space-y-6">
