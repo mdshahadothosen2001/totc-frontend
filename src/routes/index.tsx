@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { Login, Register, Home, Course } from "../components/pages";
+import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail } from "../components/pages";
 
 const routeMap: Record<string, React.ReactNode> = {
   "/": <Home />,
   "/home": <Home />,
   "/login": <Login />,
   "/register": <Register />,
-  "/blog": <Home/>,
-  "/blog/detail": <Home/>,
+  "/blog": <Blog/>,
+  "/blog/detail": <BlogDetail/>,
   "/checkout": <Home/>,
   "/search": <Home/>,
   "/course": <Course/>,
-  "/course/details": <Home/>,
+  "/course/details": <CourseDetail/>,
 };
 
 const normalize = (p: string) => {
