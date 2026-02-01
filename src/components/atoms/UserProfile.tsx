@@ -1,5 +1,4 @@
 import React from "react";
-import userImg from "../../assets/userprofile.png";
 import type { UserProfileProps } from "../../types/user.type";
 
 const UserProfile: React.FC<UserProfileProps> = ({
@@ -7,7 +6,7 @@ const UserProfile: React.FC<UserProfileProps> = ({
   src,
   className = "",
 }) => {
-  const imageSrc = src || userImg;
+  const imageSrc = src || "/src/assets/lina-round.png";
 
   return (
     <div className={`flex items-center gap-3 ${className}`} style={{ height: 83 }}>
