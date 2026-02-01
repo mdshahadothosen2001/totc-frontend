@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail } from "../components/pages";
+import { Login, Register, Home, Course, CourseDetail, Blog, BlogDetail, Checkout } from "../components/pages";
 
 const routeMap: Record<string, React.ReactNode> = {
   "/": <Home />,
@@ -7,8 +7,8 @@ const routeMap: Record<string, React.ReactNode> = {
   "/login": <Login />,
   "/register": <Register />,
   "/blog": <Blog/>,
-  "/blog/detail": <BlogDetail/>,
-  "/checkout": <Home/>,
+  "/blog/details": <BlogDetail/>,
+  "/checkout": <Checkout/>,
   "/search": <Home/>,
   "/course": <Course/>,
   "/course/details": <CourseDetail/>,

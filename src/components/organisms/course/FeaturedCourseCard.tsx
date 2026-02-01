@@ -1,4 +1,5 @@
 import * as React from "react";
+// import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "../../ui";
 import { InstructorInfo } from "../../molecules";
 import { CourseProgress } from "../../molecules";
@@ -15,7 +16,6 @@ export interface FeaturedCourseCardProps {
   animationDelay?: number;
   className?: string;
 }
-
 export const FeaturedCourseCard: React.FC<FeaturedCourseCardProps> = ({
   title,
   image,
@@ -27,10 +27,16 @@ export const FeaturedCourseCard: React.FC<FeaturedCourseCardProps> = ({
   animationDelay = 0,
   className = "",
 }) => {
+  // const navigate = useNavigate();
+  const handleClick = () => {
+    window.history.pushState({}, '', '/course/details');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
   return (
     <Card
-      className={`bg-white rounded-[20px] shadow-[0px_18.83px_47.08px_#2f327d1a] border-0 overflow-hidden translate-y-[-1rem] animate-fade-in opacity-0 ${className}`}
+      className={`bg-white rounded-[20px] shadow-[0px_18.83px_47.08px_#2f327d1a] border-0 overflow-hidden translate-y-[-1rem] animate-fade-in opacity-0 cursor-pointer ${className}`}
       style={{ "--animation-delay": `${animationDelay}ms` } as React.CSSProperties}
+      onClick={handleClick}
     >
       <CardContent className="p-5">
         <div className="relative mb-3">

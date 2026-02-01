@@ -34,12 +34,20 @@ const ReadingBlogList = (): JSX.Element => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[76px]">
           {blogCategories.map((category, index) => (
-            <CategoryCard
+            <div
               key={category.title}
-              title={category.title}
-              image={category.image}
-              animationDelay={`${(index + 1) * 200}ms`}
-            />
+              onClick={() => {
+                window.history.pushState({}, '', '/blog/details');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+              }}
+              style={{ cursor: 'pointer' }}
+            >
+              <CategoryCard
+                title={category.title}
+                image={category.image}
+                animationDelay={`${(index + 1) * 200}ms`}
+              />
+            </div>
           ))}
         </div>
       </div>

@@ -17,3 +17,9 @@ export { default as CDCategoryBadge } from "./courseDetails/CategoryBadge";
 export { default as CDDurationBadge } from "./courseDetails/DurationBadge";
 export { default as CDPriceDisplay } from "./courseDetails/PriceDisplay";
 export { default as PlayButton } from "./courseDetails/PlayButton";
+
+// Checkout exports
+export { default as CartItem } from "./checkout/CardItem";
+export { type CartItemProps } from "./checkout/CardItem";
+export { default as PaymentMethodSelector } from "./checkout/PaymentMethod";
+export { type PaymentMethod} from "./checkout/PaymentMethod";
