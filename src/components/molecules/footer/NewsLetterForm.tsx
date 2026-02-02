@@ -1,24 +1,55 @@
 import type { JSX } from "react";
-import { ButtonUI } from "../../ui";
-import { Input } from "../../ui";
+import { ButtonUI, Input } from "../../ui";
 
 const NewsLetterForm = (): JSX.Element => {
   return (
-    <div className="flex items-center gap-5">
-      <div className="relative">
+    <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-5 w-full">
+
+      <div className="relative w-full sm:w-auto">
         <Input
           type="email"
           placeholder="Your Email"
-          className="w-[400px] h-[60px] rounded-[80px] border border-[#83839a] bg-transparent text-[#82839a] [font-family:'Poppins',Helvetica] font-normal text-xl tracking-[0.80px] placeholder:text-[#82839a] px-[30px]"
+          className="
+            w-full sm:w-[360px] md:w-[400px]
+            h-[52px] sm:h-[60px]
+            rounded-full
+            border border-[#83839a]
+            bg-transparent
+            text-[#82839a]
+            font-poppins
+            text-base sm:text-lg md:text-xl
+            tracking-wide
+            placeholder:text-[#82839a]
+            px-6 sm:px-[30px]
+          "
         />
       </div>
 
-      <div className="relative">
-        <div className="absolute top-[30px] left-3 w-[151px] h-[29px] bg-[#545ae7] rounded-[60px] blur-[27px] opacity-50" />
-        <ButtonUI className="relative w-[179px] h-[60px] bg-[#49bbbd] hover:bg-[#49bbbd]/90 rounded-[60px] [font-family:'Poppins',Helvetica] font-medium text-white text-[22px] tracking-[0] leading-[normal]">
+      <div className="relative w-full sm:w-auto">
+        <div className="absolute inset-0 m-auto 
+        w-[140px] h-[24px] sm:w-[151px] sm:h-[29px]
+        bg-[#545ae7] rounded-full blur-[27px] opacity-50
+        "
+        />
+
+        <ButtonUI
+          className="
+            relative
+            w-full sm:w-[160px] md:w-[179px]
+            h-[52px] sm:h-[60px]
+            bg-[#49bbbd]
+            hover:bg-[#49bbbd]/90
+            rounded-full
+            font-poppins
+            font-medium
+            text-white
+            text-base sm:text-lg md:text-[22px]
+          "
+        >
           Subscribe
         </ButtonUI>
       </div>
+
     </div>
   );
 };
