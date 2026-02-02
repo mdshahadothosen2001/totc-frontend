@@ -3,7 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { Login, Register, Home, Course, 
   CourseDetail, Blog, BlogDetail, 
   Checkout, Search, LiteratureCourse, 
-  Membership } from "../components/pages";
+  Membership, Meeting 
+} from "../components/pages";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/course/details" element={<CourseDetail />} />
         <Route path="/course/literature" element={<LiteratureCourse />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/meeting" element={<Meeting />} />
       </Routes>
     </main>
   );

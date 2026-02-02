@@ -9,3 +9,4 @@ export { default as Checkout } from "./checkout/CheckoutPage";
 export { default as Search } from "./search/SearchPage";
 export { default as LiteratureCourse } from "./course/LiteraturePage";
 export { default as Membership } from "./membership/Membership";
+export { default as Meeting } from "./meeting/MeetingPage";
