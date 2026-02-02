@@ -45,9 +45,14 @@ const LiteratureCourse = (): JSX.Element => {
     <div className="bg-white overflow-hidden w-full relative" data-model-id="119:251">
       <NavBar />
       <LiteratureBanner />
-      <TabNavigation items={tabItems} defaultValue="book" onValueChange={handleTabChange} />
+      <TabNavigation
+        items={tabItems}
+        defaultValue="book"
+        onValueChange={handleTabChange}
+        className="hidden md:block"
+      />
 
-      <section className="w-full max-w-[90%] mx-auto px-6 sm:px-10 lg:px-32 py-16 bg-[#f8f8f8]">
+      <section className="w-full max-w-[90%] mx-auto mt-[100px] px-6 sm:px-10 lg:px-32 py-16 bg-[#f8f8f8]">
         <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#252641] text-3xl mb-10">Literature Courses</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 justify-items-center">
           {paginatedCourses.map((course, idx) => (
@@ -88,7 +93,7 @@ const LiteratureCourse = (): JSX.Element => {
           </SecondaryButton>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );
