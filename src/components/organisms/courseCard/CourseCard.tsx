@@ -2,8 +2,7 @@ import type { JSX } from "react";
 import { Card, CardContent } from "../../ui";
 import { Price } from "../../atoms";
 import { Text } from "../../atoms";
-import { AuthorInfo } from "../../molecules";
-import { MetaInfo } from "../../molecules";
+import { AuthorInfo, CourseCategoryBadge as CategoryBadge, CourseDurationBadge as DurationBadge } from "../../molecules";
 
 export interface CourseCardProps {
   image: string;
@@ -20,6 +19,7 @@ export interface CourseCardProps {
   discountedPrice: string;
   animationDelay?: string;
   className?: string;
+  categoryIcon?: JSX.Element;
 }
 
 const BlogCourseCard = ({
@@ -34,6 +34,7 @@ const BlogCourseCard = ({
   discountedPrice,
   animationDelay = "0ms",
   className = "",
+  categoryIcon,
 }: CourseCardProps): JSX.Element => {
   return (
     <Card
@@ -60,7 +61,10 @@ const BlogCourseCard = ({
             )}
           </div>
 
-          <MetaInfo category={category} duration={duration} />
+          <div className="flex justify-between items-center mt-4 mb-2 w-full">
+            <CategoryBadge category={category} icon={categoryIcon} />
+            <DurationBadge duration={duration} />
+          </div>
         </div>
 
         <h3 className="[font-family:'Poppins',Helvetica] font-medium text-[#252641] text-2xl tracking-[0] leading-normal mb-5 min-h-[77px]">

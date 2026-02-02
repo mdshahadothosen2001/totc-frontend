@@ -1,11 +1,11 @@
 import type { JSX } from "react";
-import { ClockIcon } from "lucide-react";
 import {
   Avatar,
   AvatarFallback,
   AvatarImage,
 } from "./Avatar";
-import { BadgeUI, ButtonUI, Card, CardContent } from "../../ui";
+import { ButtonUI, Card, CardContent } from "../../ui";
+import { CourseCategoryBadge as CategoryBadge, CourseDurationBadge as DurationBadge } from "../../molecules";
 
 const coursesData = [
   {
@@ -112,31 +112,23 @@ export const FeaturedCoursesSection = (): JSX.Element => {
                   {course.overlayImage && (
                     <div className="absolute inset-0 bg-[#171b41] rounded-[20px] opacity-10" />
                   )}
+                </div>
 
-                  <div className="absolute top-4 left-4 flex items-center gap-2.5">
-                    <div className="w-[21px] h-[21px] grid grid-cols-2 gap-[1px]">
-                      <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
-                      <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
-                      <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
-                      <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
-                    </div>
-                    <BadgeUI
-                      variant="secondary"
-                      className="[font-family:'Poppins',Helvetica] font-medium text-[#696983] text-sm tracking-[0.28px] bg-transparent border-0 px-0 hover:bg-transparent"
-                    >
-                      {course.category}
-                    </BadgeUI>
-                  </div>
+                <div className="flex justify-between items-center mt-4 mb-2 w-full">
+                  <CategoryBadge
+                    category={course.category}
+                    icon={
+                      <div className="w-[21px] h-[21px] grid grid-cols-2 gap-[1px]">
+                        <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
+                        <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
+                        <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
+                        <div className="w-2.5 h-2.5 rounded-sm border border-solid border-[#d9d9d9]" />
+                      </div>
+                    }
+                  />
 
-                  <div className="absolute top-4 right-4 flex items-center gap-2.5">
-                    <ClockIcon className="w-6 h-6 text-[#d9d9d9]" />
-                    <BadgeUI
-                      variant="secondary"
-                      className="[font-family:'Poppins',Helvetica] font-medium text-[#696983] text-sm tracking-[0.28px] bg-transparent border-0 px-0 hover:bg-transparent"
-                    >
-                      {course.duration}
-                    </BadgeUI>
-                  </div>
+                  <DurationBadge duration={course.duration} />
+
                 </div>
 
                 <div className="flex flex-col gap-5 mt-12">

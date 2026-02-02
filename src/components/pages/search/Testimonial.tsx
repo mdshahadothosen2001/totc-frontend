@@ -70,7 +70,7 @@ export const TestimonialsSection = (): JSX.Element => {
             >
               <Card className="relative pt-[138px] border-0 shadow-[2px_2px_10px_2px_#00000040] transition-transform hover:scale-105">
                 <img
-                  className="absolute top-0 left-1/2 -translate-x-1/2 w-[278px] h-[277px] object-cover rounded-full"
+                  className="absolute top-0 left-1/2 -translate-x-1/2 w-[158px] h-[157px] object-cover rounded-full"
                   alt={testimonial.name}
                   src={testimonial.image}
                 />

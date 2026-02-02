@@ -28,7 +28,7 @@ const BlogCard = ({
   className = "",
 }: BlogCardProps): JSX.Element => {
   const handleReadMore = () => {
-    window.history.pushState({}, '', '/blog/detail');
+    window.history.pushState({}, '', '/blog/details');
     window.dispatchEvent(new PopStateEvent('popstate'));
   };
   return (
