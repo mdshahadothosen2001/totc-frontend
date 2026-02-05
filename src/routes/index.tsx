@@ -5,11 +5,13 @@ import { Login, Register, Home, Course,
   Checkout, Search, LiteratureCourse, 
   Membership, Meeting 
 } from "../components/pages";
+import RouteGuard from "../contexts/protectedRoutes";
 
 const AppRoutes: React.FC = () => {
   return (
     <main style={{ minHeight: "calc(100vh - 83px)", background: "#F7FAFC" }}>
-      <Routes>
+      <RouteGuard>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -25,6 +27,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/membership" element={<Membership />} />
         <Route path="/meeting" element={<Meeting />} />
       </Routes>
+    </RouteGuard>
     </main>
   );
 };
