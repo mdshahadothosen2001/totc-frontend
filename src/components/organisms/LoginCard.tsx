@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { VStack, Text, HStack, Box } from "@chakra-ui/react";
 import { PrimaryButton, Input } from "../atoms";
 import { useBreakpointValue } from "@chakra-ui/react";
+import { useAuth } from "../../contexts/useAuth";
+
 
 const LoginCard: React.FC = () => {
   const [username, setUsername] = useState("");
@@ -11,8 +13,20 @@ const LoginCard: React.FC = () => {
   const inputWidth = useBreakpointValue({ base: "317.15px", md: "435px" });
   const inputHeight = useBreakpointValue({ base: "54px", md: "45px" });
 
-  const handleLogin = () => {
-    console.log("Login:", { username, password, rememberMe });
+  const { login } = useAuth();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleLogin = async () => {
+    setError(null);
+    setLoading(true);
+    try {
+      await login({ username, password });
+    } catch (err: any) {
+      setError(err?.response?.data?.detail || err?.message || "Login failed");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -64,6 +78,7 @@ const LoginCard: React.FC = () => {
         </Text>
       </HStack>
 
+      {error && <Text color="red.500">{error}</Text>}
       <Box display="flex" justifyContent="flex-end" fontWeight="400" lineHeight="24px">
         <PrimaryButton
           onClick={handleLogin}
@@ -72,6 +87,7 @@ const LoginCard: React.FC = () => {
           fontSize="16px"
           borderRadius="36px"
           style={{ paddingLeft: "48px", paddingRight: "48px" }}
+          isLoading={loading}
         >
           Login
         </PrimaryButton>

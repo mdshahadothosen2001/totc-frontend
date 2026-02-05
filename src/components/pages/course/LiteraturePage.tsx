@@ -6,7 +6,7 @@ import { TabNavigation } from "../../organisms";
 import { Footer } from "../../organisms";
 import LiteratureCourseCard from "../../organisms/courseCard/LiteratureCourseCard";
 import { PrimaryButton, SecondaryButton } from "../../atoms";
-import { literatureCourses } from "../../../constants/literatureCourses";
+import { useLiteratureCourseList } from "../../../hooks/course/LiteratureCourseList";
 
 const tabItems = [
   { id: "about", label: "About" },
@@ -22,7 +22,8 @@ const COURSES_PER_PAGE = 6;
 
 const LiteratureCourse = (): JSX.Element => {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(literatureCourses.length / COURSES_PER_PAGE);
+  const { courses = [], isLoading, pagination } = useLiteratureCourseList({ page: currentPage });
+  const totalPages = pagination?.num_pages ?? Math.ceil((courses?.length || 0) / COURSES_PER_PAGE);
 
   const handleTabChange = (value: string) => {
     console.log("Tab changed to:", value);
@@ -36,10 +37,7 @@ const LiteratureCourse = (): JSX.Element => {
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
   };
 
-  const paginatedCourses = literatureCourses.slice(
-    (currentPage - 1) * COURSES_PER_PAGE,
-    currentPage * COURSES_PER_PAGE
-  );
+  const paginatedCourses = courses || [];
 
   return (
     <div className="bg-white overflow-hidden w-full relative" data-model-id="119:251">
@@ -60,7 +58,7 @@ const LiteratureCourse = (): JSX.Element => {
               key={course.title + idx}
               image={course.image}
               title={course.title}
-              price={course.discountedPrice || ''}
+              price={course.discounted_price || ''}
             />
           ))}
         </div>

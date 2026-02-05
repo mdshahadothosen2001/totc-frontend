@@ -5,7 +5,7 @@ const Register: React.FC = () => {
 	return (
 		<div>
 			<div>
-              <AuthCard/>
+				<AuthCard defaultActive="register" />
 			</div>
 		</div>
 	);

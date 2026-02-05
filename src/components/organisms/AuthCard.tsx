@@ -4,8 +4,8 @@ import AuthLayout from "./AuthLayout";
 import LoginCard from "./LoginCard";
 import RegisterCard from "./RegisterCard";
 
-const AuthCard: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<AuthTab>("login");
+const AuthCard: React.FC<{ defaultActive?: AuthTab }> = ({ defaultActive }) => {
+  const [activeTab, setActiveTab] = useState<AuthTab>(defaultActive ?? "login");
 
   const tabOptions: TabOption[] = [
     { label: "Login", value: "login" },
