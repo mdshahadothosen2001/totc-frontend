@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../atoms/Logo";
 import UserProfile from "../atoms/UserProfile";
-import { navItems } from "../../constants";
+import { navItems } from "../../constants/navItem";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 
