@@ -21,3 +21,17 @@ export interface PasswordToggleProps {
     show: boolean;
     onClick: () => void;
 }
+
+export interface LoginPayload {
+  username: string;
+  password: string;
+}
+
+export interface AuthResponse {
+  refresh: string;
+  access: string;
+}
+
+export interface RefreshPayload {
+  refresh: string;
+}
