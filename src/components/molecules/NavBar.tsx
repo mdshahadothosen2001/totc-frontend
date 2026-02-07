@@ -107,8 +107,8 @@ const NavBar: React.FC = () => {
                   <Link
                     to="/login"
                     className="w-full text-center py-3 rounded-md border
-                    border-gray-300 text-gray-700 
-                    hover:bg-gray-100 transition
+                    border-gray-300 text-[#49BBBD] font-bold
+                      transition hover:border-[#49BBBD] 
                     "
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -118,7 +118,7 @@ const NavBar: React.FC = () => {
                     to="/register"
                     className="w-full text-center py-3 
                       rounded-md bg-[#49BBBD] text-white 
-                      hover:opacity-90 transition
+                      hover:opacity-90 transition font-bold
                     "
                     onClick={() => setMobileMenuOpen(false)}
                   >
