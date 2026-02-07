@@ -1,5 +1,20 @@
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  first_name?: string;
+  last_name?: string;
+  username?: string;
+  is_staff?: boolean;
+  is_superuser?: boolean;
+  avatar?: string;
+  avatar_url?: string;
+  profile_image?: string;
+  picture?: string;
+}
+
 export interface UserProfileProps {
-  name?: string;
-  src?: string;
+  user_info?: User | null;
   className?: string;
+  withDrawer?: boolean;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import Logo from "../atoms/Logo";
 import UserProfile from "../atoms/UserProfile";
 import { navItems } from "../../constants/navItem";
@@ -8,19 +8,7 @@ import { useAuth } from "../../contexts/useAuth";
 
 const NavBar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { user, isAuthenticated, loading, logout } = useAuth();
-
-  const displayName = useMemo(() => {
-    if (!user) return "";
-    return (
-      user.name || user.first_name || user.username || user.email || "User"
-    );
-  }, [user]);
-
-  const avatarSrc = useMemo(() => {
-    if (!user) return undefined;
-    return user.avatar || user.profile_image || user.picture || undefined;
-  }, [user]);
+  const { user, isAuthenticated, loading } = useAuth();
 
   return (
     <header className="w-full h-[143px] relative bg-white z-50">
@@ -38,7 +26,10 @@ const NavBar: React.FC = () => {
               <li key={item.label}>
                 <Link
                   to={item.href}
-                  className="text-[16px] md:text-[18px] lg:text-[22px] font-poppins text-[#5B5B5B] hover:text-[#49BBBD] transition-colors"
+                  className="text-[16px] md:text-[18px] lg:text-[22px]
+                    font-poppins text-[#5B5B5B] hover:text-[#49BBBD] 
+                    transition-colors
+                  "
                 >
                   {item.label}
                 </Link>
@@ -60,11 +51,14 @@ const NavBar: React.FC = () => {
           {/* Profile for Desktop */}
           <div className="hidden md:block">
             {loading ? null : isAuthenticated ? (
-              <UserProfile name={displayName} src={avatarSrc} />
+              <UserProfile user_info={user} withDrawer />
             ) : (
               <Link
                 to="/login"
-                className="text-[16px] md:text-[18px] lg:text-[22px] font-poppins text-[#5B5B5B] hover:text-[#49BBBD] transition-colors"
+                className="text-[16px] md:text-[18px] lg:text-[22px] 
+                  font-poppins text-[#5B5B5B] hover:text-[#49BBBD] 
+                  transition-colors
+                "
               >
                 Login
               </Link>
@@ -98,39 +92,34 @@ const NavBar: React.FC = () => {
               ))}
             </ul>
 
-            <div className="mt-auto flex flex-col gap-4">
+            <div className="mt-auto flex flex-col gap-4 mb-10">
               {loading ? null : isAuthenticated ? (
                 <>
-                  <Link
-                    to="/profile"
-                    className="w-full text-left py-3 rounded-md flex items-center gap-3 border border-gray-100 text-gray-700 hover:bg-gray-50 transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <UserProfile name={displayName} src={avatarSrc} className="!h-auto" />
-                  </Link>
-
-                  <button
-                    onClick={() => {
-                      logout();
-                      setMobileMenuOpen(false);
-                    }}
-                    className="w-full text-center py-3 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
-                  >
-                    Logout
-                  </button>
+                  <div className="w-full text-left py-3 rounded-md 
+                    flex items-center gap-3 border border-gray-100 
+                   text-gray-700 hover:bg-gray-50 transition
+                  ">
+                    <UserProfile user_info={user} className="!h-auto" withDrawer />
+                  </div>
                 </>
               ) : (
                 <>
                   <Link
                     to="/login"
-                    className="w-full text-center py-3 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition"
+                    className="w-full text-center py-3 rounded-md border
+                    border-gray-300 text-gray-700 
+                    hover:bg-gray-100 transition
+                    "
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Login
                   </Link>
                   <Link
                     to="/register"
-                    className="w-full text-center py-3 rounded-md bg-[#49BBBD] text-white hover:opacity-90 transition"
+                    className="w-full text-center py-3 
+                      rounded-md bg-[#49BBBD] text-white 
+                      hover:opacity-90 transition
+                    "
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Register

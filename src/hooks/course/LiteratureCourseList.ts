@@ -1,7 +1,6 @@
 import { useMemo } from "react";
 import { useGet } from "../useQuery";
 import type { Course, LiteratureResponse } from "../../types/course.type";
-import type { ApiResponse } from "../../types/common.type";
 import keys from "../../constants/key";
 
 interface UseLiteratureParams {
