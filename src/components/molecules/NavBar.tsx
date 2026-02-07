@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../atoms/Logo";
 import UserProfile from "../atoms/UserProfile";
 import { navItems } from "../../constants/navItem";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { useAuth } from "../../contexts/useAuth";
+import useNavStore from "../../hooks/useNavStore";
 
 const NavBar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { user, isAuthenticated, loading } = useAuth();
+  const location = useLocation();
+  const active = useNavStore((s) => s.active);
+  const setActive = useNavStore((s) => s.setActive);
+  useEffect(() => {
+    if (location.pathname !== active) setActive(location.pathname);
+  }, [location.pathname]);
 
   return (
     <header className="w-full h-[143px] relative bg-white z-50">
@@ -22,19 +29,22 @@ const NavBar: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-1 justify-center">
           <ul className="flex gap-8 lg:gap-12 items-center">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <Link
-                  to={item.href}
-                  className="text-[16px] md:text-[18px] lg:text-[22px]
-                    font-poppins text-[#5B5B5B] hover:text-[#49BBBD] 
-                    transition-colors
-                  "
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isActive = active === item.href;
+              return (
+                <li key={item.label}>
+                  <Link
+                    to={item.href}
+                    onClick={() => setActive(item.href)}
+                    className={`text-[16px] md:text-[18px] lg:text-[22px] font-poppins transition-colors ${
+                      isActive ? "text-[#49BBBD] font-bold" : "text-[#5B5B5B] hover:text-[#49BBBD]"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 
@@ -84,7 +94,10 @@ const NavBar: React.FC = () => {
                   <Link
                     to={item.href}
                     className="text-lg font-medium text-[#5B5B5B] hover:text-[#49BBBD]"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setActive(item.href);
+                    }}
                   >
                     {item.label}
                   </Link>
