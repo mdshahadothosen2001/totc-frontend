@@ -23,4 +23,4 @@ export { default as CourseSectionTitle } from "./title/CourseSectionTitle";
 
 // Course Details components
 export { default as PriceDisplay } from "./courseDetails/PricingDisplay";
-
+export { default as Pagination } from "./pagination/Pagination";

@@ -5,7 +5,7 @@ import { LiteratureBanner } from "../../organisms";
 import { TabNavigation } from "../../organisms";
 import { Footer } from "../../organisms";
 import LiteratureCourseCard from "../../organisms/courseCard/LiteratureCourseCard";
-import { PrimaryButton, SecondaryButton } from "../../atoms";
+import { Pagination } from "../../atoms";
 import { useLiteratureCourseList } from "../../../hooks/course/LiteratureCourseList";
 
 const tabItems = [
@@ -18,31 +18,29 @@ const tabItems = [
   { id: "review", label: "Review" },
 ];
 
-const COURSES_PER_PAGE = 6;
 
 const LiteratureCourse = (): JSX.Element => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const { courses = [], isLoading, pagination } = useLiteratureCourseList({ page: currentPage });
-  const totalPages = pagination?.num_pages ?? Math.ceil((courses?.length || 0) / COURSES_PER_PAGE);
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [rowsPerPage, setRowsPerPage] = useState<number>(20);
+  const { courses = [], pagination } = useLiteratureCourseList({ page: currentPage, page_size: rowsPerPage });
 
   const handleTabChange = (value: string) => {
     console.log("Tab changed to:", value);
   };
 
-  const handlePrevPage = () => {
-    setCurrentPage((prev) => Math.max(prev - 1, 1));
+  const handleRowsPerPageChange = (rows: number) => {
+    setRowsPerPage(rows);
+    setCurrentPage(1);
   };
-
-  const handleNextPage = () => {
-    setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-  };
-
-  const paginatedCourses = courses || [];
 
   return (
     <div className="bg-white overflow-hidden w-full relative" data-model-id="119:251">
+      
       <NavBar />
+
       <LiteratureBanner />
+      
+      {/* Tab Navigation */}
       <TabNavigation
         items={tabItems}
         defaultValue="book"
@@ -51,45 +49,43 @@ const LiteratureCourse = (): JSX.Element => {
       />
 
       <section className="w-full max-w-[90%] mx-auto mt-[100px] px-6 sm:px-10 lg:px-32 py-16 bg-[#f8f8f8]">
-        <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#252641] text-3xl mb-10">Literature Courses</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 justify-items-center">
-          {paginatedCourses.map((course, idx) => (
-            <LiteratureCourseCard
-              key={course.title + idx}
-              image={course.image}
-              title={course.title}
-              price={course.discounted_price || ''}
-            />
-          ))}
+
+
+        {/* Course Listing Section */}
+        <div>
+          <h2 className="[font-family:'Poppins',Helvetica] font-bold text-[#252641] text-3xl mb-10">Literature Courses</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 justify-items-center">
+            {courses.map((course, idx) => (
+              <LiteratureCourseCard
+                key={course.title + idx}
+                image={course.image}
+                title={course.title}
+                price={course.discounted_price || ''}
+              />
+            ))}
+          </div>
         </div>
-        {/* Pagination Controls */}
-        <div className="flex justify-center gap-4">
-          <SecondaryButton
-            onClick={handlePrevPage}
-            disabled={currentPage === 1}
-            aria-label="Previous page"
-            title="Previous page"
-          >
-            {'<'}
-          </SecondaryButton>
-          {Array.from({ length: totalPages }, (_, i) => (
-            <PrimaryButton
-              key={i}
-              onClick={() => setCurrentPage(i + 1)}
-              className={currentPage === i + 1 ? "bg-[#358789]" : ""}
-            >
-              {i + 1}
-            </PrimaryButton>
-          ))}
-          <SecondaryButton
-            onClick={handleNextPage}
-            disabled={currentPage === totalPages}
-            aria-label="Next page"
-            title="Next page"
-          >
-            {'>'}
-          </SecondaryButton>
-        </div>
+
+        {/* Pagination Section */}
+        {(() => {
+          const shouldShowPagination = (pagination?.count ?? (courses?.length || 0)) > 0;
+          const handlePageChange = (p: number) => setCurrentPage(p);
+
+          return (
+            shouldShowPagination && (
+              <div className="mt-3 md:mt-5">
+                <Pagination
+                  currentPage={currentPage}
+                  totalPages={pagination?.num_pages ?? 1}
+                  rowsPerPage={rowsPerPage}
+                  onPageChange={handlePageChange}
+                  onRowsPerPageChange={handleRowsPerPageChange}
+                />
+              </div>
+            )
+          );
+        })()}
+
       </section>
 
       <Footer />

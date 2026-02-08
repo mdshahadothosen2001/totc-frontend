@@ -6,6 +6,7 @@ import keys from "../../constants/key";
 interface UseLiteratureParams {
   searchTerm?: string;
   page?: number;
+  page_size?: number;
 }
 
 const mapCourseData = (courses?: Course[]): Course[] => {
@@ -18,14 +19,15 @@ const mapCourseData = (courses?: Course[]): Course[] => {
   }));
 };
 
-export const useLiteratureCourseList = ({ searchTerm, page }: UseLiteratureParams = {}) => {
+export const useLiteratureCourseList = ({ searchTerm, page, page_size }: UseLiteratureParams = {}) => {
   const endpoint = useMemo(() => {
     const params = new URLSearchParams();
     if (searchTerm?.trim()) params.append("search", searchTerm.trim());
     if (page && page > 0) params.append("page", String(page));
+    if (page_size && page_size > 0) params.append("page_size", String(page_size));
     const query = params.toString();
     return query ? `course/literature/list/?${query}` : "course/literature/list/";
-  }, [searchTerm, page]);
+  }, [searchTerm, page, page_size]);
 
   const { data: response, isLoading } = useGet<LiteratureResponse>(endpoint, {
     key: keys.COURSE,
