@@ -7,10 +7,8 @@ export interface User {
   username?: string;
   is_staff?: boolean;
   is_superuser?: boolean;
-  avatar?: string;
   avatar_url?: string;
   profile_image?: string;
-  picture?: string;
 }
 
 export interface UserProfileProps {

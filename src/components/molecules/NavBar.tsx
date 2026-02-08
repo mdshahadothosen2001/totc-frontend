@@ -12,9 +12,9 @@ const NavBar: React.FC = () => {
   const { user, isAuthenticated, loading } = useAuth();
   const location = useLocation();
   const active = useNavStore((s) => s.active);
-  const setActive = useNavStore((s) => s.setActive);
+  const navigateTo = useNavStore((s) => s.navigate);
   useEffect(() => {
-    if (location.pathname !== active) setActive(location.pathname);
+    if (location.pathname !== active) navigateTo(location.pathname);
   }, [location.pathname]);
 
   return (
@@ -35,7 +35,7 @@ const NavBar: React.FC = () => {
                 <li key={item.label}>
                   <Link
                     to={item.href}
-                    onClick={() => setActive(item.href)}
+                    onClick={() => navigateTo(item.href)}
                     className={`text-[16px] md:text-[18px] lg:text-[22px] font-poppins transition-colors ${
                       isActive ? "text-[#49BBBD] font-bold" : "text-[#5B5B5B] hover:text-[#49BBBD]"
                     }`}
@@ -96,7 +96,7 @@ const NavBar: React.FC = () => {
                     className="text-lg font-medium text-[#5B5B5B] hover:text-[#49BBBD]"
                     onClick={() => {
                       setMobileMenuOpen(false);
-                      setActive(item.href);
+                      navigateTo(item.href);
                     }}
                   >
                     {item.label}
@@ -112,7 +112,7 @@ const NavBar: React.FC = () => {
                     flex items-center gap-3 border border-gray-100 
                    text-gray-700 hover:bg-gray-50 transition
                   ">
-                    <UserProfile user_info={user} className="!h-auto" withDrawer />
+                        <UserProfile user_info={user} className="!h-auto" withDrawer />
                   </div>
                 </>
               ) : (

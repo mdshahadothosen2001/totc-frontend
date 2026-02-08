@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Login, Register, Home, Course, 
   CourseDetail, CourseLesson, Blog, BlogDetail, 
   Checkout, Search, LiteratureCourse, 
-  Membership, Meeting 
+  Membership, Meeting, Profile 
 } from "../components/pages";
 import RouteGuard from "../contexts/protectedRoutes";
 
@@ -26,6 +26,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/course/literature" element={<LiteratureCourse />} />
         <Route path="/membership" element={<Membership />} />
         <Route path="/meeting" element={<Meeting />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </RouteGuard>
     </main>
