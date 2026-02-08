@@ -11,4 +11,4 @@ export { default as Search } from "./search/SearchPage";
 export { default as LiteratureCourse } from "./course/LiteraturePage";
 export { default as Membership } from "./membership/Membership";
 export { default as Meeting } from "./meeting/MeetingPage";
-export { default as Profile } from "./user/Profile";
+export { default as Profile } from "./user/ProfilePage";

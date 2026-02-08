@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import useNavStore from "../../../hooks/useNavStore";
+import UserInfo from "./UserInfo";
 
 const Profile = () => {
   const prev = useNavStore((s) => s.prev);
@@ -26,7 +27,7 @@ const Profile = () => {
       >
         &larr; Back
       </button>
-      <h1 className="text-2xl font-bold">Profile</h1>
+      <UserInfo className="mt-4" />
     </div>
   );
 };
