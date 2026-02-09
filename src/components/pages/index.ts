@@ -12,3 +12,4 @@ export { default as LiteratureCourse } from "./course/LiteraturePage";
 export { default as Membership } from "./membership/Membership";
 export { default as Meeting } from "./meeting/MeetingPage";
 export { default as Profile } from "./user/ProfilePage";
+export { default as NotFound } from "./NotFound";
